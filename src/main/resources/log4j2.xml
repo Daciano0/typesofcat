@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO" monitorInterval="30">
+    <Properties>
+        <property name="SERVICE_NAME">${sys:SERVICE_NAME}</property>
+<!--        <property name="CAR_URL">${sys:CAR_URL}</property>-->
+    </Properties>
+    <Appenders>
+<!--        <Http name="${SERVICE_NAME}" url="${JUDO_LOGSTASH}">-->
+<!--            <JsonLayout compact="true" eventEol="true" properties="true">-->
+<!--                <KeyValuePair key="index" value="${SERVICE_NAME}"/>-->
+<!--            </JsonLayout>-->
+<!--        </Http>-->
+        <Console name="Console" target="SYSTEM_OUT">
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="INFO">
+<!--            <AppenderRef ref="${SERVICE_NAME}"/>-->
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
