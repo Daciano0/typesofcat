@@ -52,7 +52,7 @@ public class TypesCatController {
 
         log.info(new EventLogDTO(EventsEnum.REQUEST, "genarator of cat type: "+breed).toString());
 
-        CatBreeds result = typesCatService.getBreedsList(breed);
+        CatBreeds result = typesCatService.getCatByBreeds(breed);
 
         log.info(new EventLogDTO(EventsEnum.REQUEST, result).toString());
 
@@ -64,7 +64,7 @@ public class TypesCatController {
 
         log.info(new EventLogDTO(EventsEnum.REQUEST, "genarator of cat type: "+temperament).toString());
 
-        List<CatBreeds> result = typesCatService.getTemperamentList(temperament);
+        List<CatBreeds> result = typesCatService.getListByTemperament(temperament);
 
         log.info(new EventLogDTO(EventsEnum.REQUEST, result).toString());
 
@@ -76,7 +76,7 @@ public class TypesCatController {
 
         log.info(new EventLogDTO(EventsEnum.REQUEST, "genarator of cat type: "+origin).toString());
 
-        List<CatBreeds> result = typesCatService.getOriginList(origin);
+        List<CatBreeds> result = typesCatService.getListByOrigin(origin);
 
         log.info(new EventLogDTO(EventsEnum.REQUEST, result).toString());
 
