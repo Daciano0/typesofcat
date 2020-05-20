@@ -133,7 +133,7 @@ check.dependsOn jacocoTestCoverageVerification
 test {
 	useJUnitPlatform()
 	jacoco {
-		excludes = ['com/api/thecat.typesofcat/dto/*',
+		excludes = ['com/api/thecat/typesofcat/DTO/*',
 					'TypesofcatApplication.java']
 	}
 }

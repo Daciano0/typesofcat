@@ -47,7 +47,8 @@ public class TypesCatService {
         return list;
     }
 
-    public CatBreeds getBreedsList(String breed) {
+    public CatBreeds getCatByBreeds(String breed) {
+
         CatBreeds catBreeds = typesCatRepository.findByName(breed);
 
         if(catBreeds != null){
@@ -58,12 +59,12 @@ public class TypesCatService {
         return catBreeds;
     }
 
-    public List<CatBreeds> getTemperamentList(String temperament) {
+    public List<CatBreeds> getListByTemperament(String temperament) {
 
         return typesCatRepository.findAllByTemperamentLike(temperament);
     }
 
-    public List<CatBreeds> getOriginList(String origin) {
+    public List<CatBreeds> getListByOrigin(String origin) {
 
         return typesCatRepository.findAllByOrigin(origin);
     }

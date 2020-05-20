@@ -1,8 +1,11 @@
 spring:
+  profiles:
+    active: test
   application:
     name: typescat-breeds
   cloud:
     consul:
+      enabled: false
       host: 0.0.0.0:8500
       config:
         format: YAML
