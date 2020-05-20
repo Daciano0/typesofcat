@@ -11,8 +11,9 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 @Data
 @Configuration
 @EnableConfigurationProperties
-@ConfigurationProperties(prefix = "typescat")
+@ConfigurationProperties(prefix = "typesofcat")
 public class TypesCatConfig {
 
+    String teste;
 
 }

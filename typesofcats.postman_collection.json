@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "1d73e6c9-667d-47cf-9288-301698c868c6",
+		"name": "typesofcats",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "list of all cats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/types/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"types",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " list of all cats by temperament",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/types/temperament/list?temperament=Intelligent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"types",
+						"temperament",
+						"list"
+					],
+					"query": [
+						{
+							"key": "temperament",
+							"value": "Intelligent"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " list of all cats by origin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/types/origin/list?origin=United Kingdom",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"types",
+						"origin",
+						"list"
+					],
+					"query": [
+						{
+							"key": "origin",
+							"value": "United Kingdom"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cat type breed - all information in base of cats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/types/breed?breed=Havana Brown",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"types",
+						"breed"
+					],
+					"query": [
+						{
+							"key": "breed",
+							"value": "Havana Brown"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "criteria fields query - types of cat ",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "bigsecurity",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/types/breeds/queries?breed=American Curl&temperament=Social&origin=United States",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"types",
+						"breeds",
+						"queries"
+					],
+					"query": [
+						{
+							"key": "breed",
+							"value": "American Curl"
+						},
+						{
+							"key": "temperament",
+							"value": "Social"
+						},
+						{
+							"key": "origin",
+							"value": "United States"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Docker list of all cats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:8081/types/list",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8081",
+					"path": [
+						"types",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Docker list of all cats by temperament",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:8081/types/temperament/list?temperament=Intelligent",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8081",
+					"path": [
+						"types",
+						"temperament",
+						"list"
+					],
+					"query": [
+						{
+							"key": "temperament",
+							"value": "Intelligent"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Docker  list of all cats by origin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:8081/types/origin/list?origin=United Kingdom",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8081",
+					"path": [
+						"types",
+						"origin",
+						"list"
+					],
+					"query": [
+						{
+							"key": "origin",
+							"value": "United Kingdom"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Docker cat type breed - all information in base of cats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:8081/types/breed?breed=Havana Brown",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8081",
+					"path": [
+						"types",
+						"breed"
+					],
+					"query": [
+						{
+							"key": "breed",
+							"value": "Havana Brown"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Docker criteria fields query - types of cat ",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "bigsecurity",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:8081/types/breeds/queries?breed=American Curl&temperament=Social&origin=United States",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8081",
+					"path": [
+						"types",
+						"breeds",
+						"queries"
+					],
+					"query": [
+						{
+							"key": "breed",
+							"value": "American Curl"
+						},
+						{
+							"key": "temperament",
+							"value": "Social"
+						},
+						{
+							"key": "origin",
+							"value": "United States"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

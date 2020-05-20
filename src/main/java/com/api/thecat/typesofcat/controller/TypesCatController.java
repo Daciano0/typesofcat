@@ -1,6 +1,7 @@
 package com.api.thecat.typesofcat.controller;
 
 import com.api.thecat.typesofcat.TDO.EventLogDTO;
+import com.api.thecat.typesofcat.config.TypesCatConfig;
 import com.api.thecat.typesofcat.domain.CatBreeds;
 import com.api.thecat.typesofcat.enums.EventsEnum;
 import com.api.thecat.typesofcat.service.TypesCatService;
@@ -21,12 +22,16 @@ public class TypesCatController {
 
     private TypesCatService typesCatService;
 
+    private TypesCatConfig typesCatConfig;
+
     //Criteria
     @GetMapping(value = "/types/breeds/queries")
     public ResponseEntity<List<CatBreeds>> catBreeds(
             @RequestParam( required = false) String breed,
             @RequestParam( required = false) String temperament,
             @RequestParam( required = false) String origin){
+
+        typesCatConfig.getTeste();
 
         List<CatBreeds> result = typesCatService.queriesBuilder(breed, temperament, origin);
 
