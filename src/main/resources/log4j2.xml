@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="INFO" monitorInterval="30">
     <Properties>
-        <property name="SERVICE_NAME">${sys:SERVICE_NAME}</property>
-<!--        <property name="CAR_URL">${sys:CAR_URL}</property>-->
+<!--        <property name="SERVICE_NAME">${sys:SERVICE_NAME}</property>-->
+<!--        <property name="CAT_URL">${sys:CAT_URL}</property>-->
     </Properties>
     <Appenders>
-<!--        <Http name="${SERVICE_NAME}" url="${JUDO_LOGSTASH}">-->
+<!--        <Http name="${SERVICE_NAME}" url="${CAT_URL}">-->
 <!--            <JsonLayout compact="true" eventEol="true" properties="true">-->
 <!--                <KeyValuePair key="index" value="${SERVICE_NAME}"/>-->
 <!--            </JsonLayout>-->
