@@ -17,12 +17,12 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 public class MongoDBConfig {
 
 
-    public @Bean
+//    public @Bean
     MongoDbFactory mongoDbFactory()  {
         return new SimpleMongoDbFactory(new MongoClient(), "test");
     }
 
-    public @Bean
+//    public @Bean
     MongoTemplate mongoTemplate()  {
 
         MongoTemplate mongoTemplate = new MongoTemplate(mongoDbFactory());

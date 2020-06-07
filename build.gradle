@@ -4,7 +4,7 @@ plugins {
 	id 'java'
 }
 
-group = 'com.api.thetcat'
+group = 'com.api.thecat'
 version = '0.0.1'
 sourceCompatibility = '11'
 
@@ -22,15 +22,7 @@ ext {
 	set('springCloudVersion', "Hoxton.SR4")
 }
 
-apply plugin: 'checkstyle'
 apply plugin: 'jacoco'
-
-checkstyleMain {
-	source = 'src/main/java'
-}
-checkstyleTest {
-	source = 'src/test/java'
-}
 
 
 jacoco {
@@ -60,23 +52,7 @@ dependencies {
 
 	implementation 'org.springframework.cloud:spring-cloud-starter-loadbalancer'
 
-	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign', {
-		exclude group: 'org.springframework.cloud', module:'spring-cloud-netflix-core'
-		exclude group: 'com.netflix.ribbon', module:'ribbon'
-		exclude group: 'com.netflix.ribbon', module:'ribbon-core'
-		exclude group: 'com.netflix.ribbon', module:'ribbon-httpclient'
-		exclude group: 'com.netflix.ribbon', module:'ribbon-loadbalancer'
-	}
-	implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
 
-
-	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign', {
-		exclude group: 'org.springframework.cloud', module:'spring-cloud-netflix-core'
-		exclude group: 'com.netflix.ribbon', module:'ribbon'
-		exclude group: 'com.netflix.ribbon', module:'ribbon-core'
-		exclude group: 'com.netflix.ribbon', module:'ribbon-httpclient'
-		exclude group: 'com.netflix.ribbon', module:'ribbon-loadbalancer'
-	}
 	implementation 'org.springframework.cloud:spring-cloud-starter-sleuth',{
 		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
 	}
@@ -93,8 +69,7 @@ dependencies {
 	testImplementation 'de.flapdoodle.embed:de.flapdoodle.embed.mongo'
 	compile "org.springframework.boot:spring-boot-configuration-processor"
 
-	testCompile group: 'org.springframework.cloud', name: 'spring-cloud-contract-wiremock', version: '2.2.0.RELEASE'
-	testImplementation 'org.springframework.cloud:spring-cloud-stream-test-support'
+
 
 }
 

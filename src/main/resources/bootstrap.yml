@@ -1,8 +1,6 @@
 spring:
-  profiles:
-    active: test
   application:
-    name: types-breeds
+    name: typesofcat-breeds
   cloud:
     consul:
       enabled: true
@@ -16,9 +14,5 @@ spring:
     loadbalancer:
       ribbon:
         enabled: false
-  data:
-    mongodb:
-      host: mongo-cat
-      port: 27017
-
 securitycat: bigsecurity
+

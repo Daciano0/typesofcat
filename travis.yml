@@ -1,0 +1,21 @@
+language: java
+jdk:
+  - oraclejdk11
+before_install:
+  - sudo apt-get update
+  - echo "Let's start gradle !"
+  - gradle assemble
+  - echo "We are in the Docker folder!"
+script:
+  - docker build -t typesofcat-03 .
+before_deploy:
+  echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
+deploy:
+  provider: script
+  script:
+    docker tag typesofcat-03:latest daciobsantos/typesofcat-03:latest;
+    docker push daciobsantos/typesofcat-03;
+  on:
+    branch: master
+notifications:
+  email: false

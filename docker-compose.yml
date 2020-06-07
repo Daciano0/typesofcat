@@ -20,6 +20,22 @@ services:
     ports:
       - "27017:27017"
     restart: always
+  typesofcat:
+    image: daciobsantos/typesofcat-03:latest
+    container_name: typesofcat
+    depends_on:
+      - db
+      - consul
+    environment:
+      TZ: America/Sao_Paulo
+    links:
+      - db
+      - consul
+    networks:
+      - local-cat
+    ports:
+      - "8081:8080"
+    restart: always
   thecat:
     image: daciobsantos/thecat:latest
     container_name: thecat
@@ -37,21 +53,5 @@ services:
       - "8080:8080"
     command:
       - gradle build
-    restart: always
-  typesofcat:
-    image: daciobsantos/typesofcat:latest
-    container_name: typesofcat
-    depends_on:
-      - db
-      - consul
-    environment:
-      TZ: America/Sao_Paulo
-    links:
-      - db
-      - consul
-    networks:
-      - local-cat
-    ports:
-      - "8081:8080"
     restart: always
 
