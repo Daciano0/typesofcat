@@ -16,6 +16,6 @@ deploy:
     docker tag typesofcat-03:latest daciobsantos/typesofcat-03:latest;
     docker push daciobsantos/typesofcat-03;
   on:
-    branch: master
+    branch: feat/test-travisci
 notifications:
   email: false
